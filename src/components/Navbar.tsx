@@ -11,10 +11,10 @@ const Navbar = () => {
     }
 
     return (
-        <header className="sticky top-0 z-50 bg-linear-to-r from-cyan-500 to-cyan-700 flex flex-row justify-between p-4 text-white items-center">
-            <Link to="/" className="font-bold text-xl hover:scale-105 transition-transform duration-500">MediSync</Link>
+        <header className="sticky top-0 z-50 bg-linear-to-r from-cyan-500 to-cyan-700 flex flex-row justify-between p-4 text-white items-center mx-auto w-full">
+            <Link to="/" className="font-bold text-2xl sm:text-3xl">MediSync</Link>
             {/* Desktop Navigation */}
-            <nav className="hidden text-white md:flex items-center space-x-8 text-cyan-700">
+            <nav className="hidden text-white md:flex items-center space-x-8 text-cyan-700 text-sm sm:text-base">
                 <Link to="/" className="rounded-xl py-2 px-6 hover:bg-white/30 transition-colors duration-500 cursor-pointer">Home</Link>
                 <Link to="/services" className="rounded-xl py-2 px-6 hover:bg-white/30 transition-colors duration-500 cursor-pointer">Services</Link>
                 <Link to="/contact-us" className="rounded-xl py-2 px-6 hover:bg-white/30 transition-colors duration-500 cursor-pointer">Contact Us</Link>
