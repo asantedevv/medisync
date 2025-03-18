@@ -2,9 +2,9 @@ import { Link } from "react-router-dom";
 
 const Footer = () => {
     return (
-        <footer className="bg-gradient-to-b from-cyan-600 to-cyan-900 py-12 sm:py-16 md:py-20 px-4 sm:px-6 lg:px-8 text-white">
+        <footer className="bg-gradient-to-b from-cyan-400 to-cyan-700 py-12 sm:py-16 md:py-20 px-4 sm:px-6 lg:px-8 text-white">
             {/* Main Content */}
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-12">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-12  max-w-7xl mx-auto">
                 {/* MediSync Section */}
                 <div className="space-y-4">
                     <h3 className="text-2xl sm:text-3xl font-bold text-white">MediSync</h3>

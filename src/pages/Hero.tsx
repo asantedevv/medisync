@@ -1,4 +1,4 @@
-const HeroSection = () => {
+const Hero = () => {
     return (
         <div className="relative flex items-center justify-center scale-x-[-1] min-h-screen bg-cover bg-center p-4 md:p-8"
             style={{ backgroundImage: "url('cheerful-ethnic-doctor-with-arms-crossed.jpg')" }}>
@@ -24,4 +24,4 @@ const HeroSection = () => {
     );
 };
 
-export default HeroSection;
+export default Hero;
