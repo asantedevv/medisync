@@ -1,54 +1,53 @@
-# React + TypeScript + Vite
+# MediSync
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+MediSync is a collaborative project aimed at creating a comprehensive healthcare management application. The project is divided into several teams, each responsible for different aspects of the application.
 
-Currently, two official plugins are available:
+## Project Structure
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### Frontend Team
+- Kwame Asante Junior - 
 
-## Expanding the ESLint configuration
+### Backend Team
+- 
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## Preview
+[Preview our App](https://medisync-black.vercel.app/)
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+## Getting Started
+
+### Prerequisites
+- Node.js
+- npm or yarn
+- Git
+
+### Installation
+1. Clone the repository:
+  ```bash
+  git clone https://github.com/asantedevv/medisync.git
+  ```
+2. Navigate to the project directory:
+  ```bash
+  cd medisync
+  ```
+3. Install dependencies:
+  ```bash
+  npm install
+  ```
+
+### Running the App
+To start the development server, run:
+```bash
+npm run dev
 ```
+The app will be available at `http://localhost:3000`.
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Contributing
+We welcome contributions from all team members. Please follow the guidelines below:
+1. Fork the repository.
+2. Create a new branch for your feature or bugfix.
+3. Commit your changes and push to your fork.
+4. Submit a pull request with a detailed description of your changes.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+## Contact
+For any questions or suggestions, please contact the project manager at [email@example.com].

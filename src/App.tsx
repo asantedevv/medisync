@@ -1,21 +1,35 @@
-import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom'
+import { useEffect } from "react"
 import Navbar from './components/Navbar'
-import HeroSection from './pages/HeroSection'
+import HomePages from './pages/HomePages'
 import Footer from './components/Footer'
 
-function App() {
+const ScrollHandler = () => {
+  const location = useLocation();
 
+  useEffect(() => {
+    if (location.state?.scrollTo) {
+      const section = document.getElementById(location.state.scrollTo);
+      if (section) {
+        section.scrollIntoView({ behavior: "smooth" });
+      }
+    }
+  }, [location]);
+
+  return null;
+};
+
+function App() {
   return (
     <BrowserRouter>
       <Navbar />
+      <ScrollHandler />
       <Routes>
-        <Route path="/" element={<HeroSection />} />
-        <Route path="/services" element={<HeroSection />} />
-        <Route path="/contact-us" element={<HeroSection />} />
+        <Route path="/" element={<HomePages />} />
       </Routes>
       <Footer />
     </BrowserRouter>
-  )
+  );
 }
 
-export default App
+export default App;
