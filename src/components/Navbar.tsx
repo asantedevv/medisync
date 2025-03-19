@@ -20,11 +20,13 @@ const Navbar = () => {
         if (location.pathname !== "/") {
             // Redirect to homepage and pass the section id as state
             navigate("/", { state: { scrollTo: id } });
+            toggleMobileMenu();
         } else {
             // If already on homepage, just scroll
             const section = document.getElementById(id);
             if (section) {
                 section.scrollIntoView({ behavior: "smooth" });
+                toggleMobileMenu();
             }
         }
     };
@@ -37,8 +39,9 @@ const Navbar = () => {
                 <button onClick={() => scrollToSection({ id: "hero" })} className="rounded-xl py-2 px-6 hover:bg-white/30 transition-colors duration-500 cursor-pointer">Home</button>
                 <button onClick={() => scrollToSection({ id: "services" })} className="rounded-xl py-2 px-6 hover:bg-white/30 transition-colors duration-500 cursor-pointer">Services</button>
                 <button onClick={() => scrollToSection({ id: "contact" })} className="rounded-xl py-2 px-6 hover:bg-white/30 transition-colors duration-500 cursor-pointer">Contact Us</button>
-                <button className="text-cyan-700 py-2 px-6 bg-white rounded-xl drop-shadow-lg hover:-translate-y-1 transition-translate duration-500 cursor-pointer">Login</button>
-                <button className="text-cyan-700 py-2 px-6 bg-white rounded-xl drop-shadow-lg hover:-translate-y-1 transition-translate duration-500 cursor-pointer">Sign Up</button>
+                <Link to="/login" className="rounded-xl py-2 px-6 hover:bg-white/30 transition-colors duration-500 cursor-pointer">
+                    <button className="text-cyan-700 py-2 px-6 bg-white rounded-xl drop-shadow-lg hover:-translate-y-1 transition-translate duration-500 cursor-pointer">Login</button>
+                </Link>
             </nav>
             {/* Mobile Navigation */}
             <div className="md:hidden focus:outline-none">
@@ -46,7 +49,7 @@ const Navbar = () => {
                     toggled={mobileMenuOpen}
                     toggle={toggleMobileMenu}
                     size={24}
-                    duration={0.8}
+                    duration={0.5}
                     easing="ease-in"
                     color="white"
                 />
@@ -63,8 +66,14 @@ const Navbar = () => {
                     <button onClick={() => scrollToSection({ id: "hero" })} className="w-full py-2 px-6">Home</button>
                     <button onClick={() => scrollToSection({ id: "services" })} className="w-full py-2 px-6">Services</button>
                     <button onClick={() => scrollToSection({ id: "contact" })} className="w-full py-2 px-6">Contact Us</button>
-                    <button className="w-full text-cyan-700 py-2 px-6 bg-white rounded-xl drop-shadow-lg">Login</button>
-                    <button className="w-full text-cyan-700 py-2 px-6 bg-white rounded-xl drop-shadow-lg">Sign Up</button>
+                    <Link to="/login" className="w-full">
+                        <button
+                            className="w-full text-cyan-700 py-2 px-6 bg-white rounded-xl drop-shadow-lg"
+                            onClick={() => toggleMobileMenu()}
+                        >
+                            Login
+                        </button>
+                    </Link>
                 </motion.nav>
             )}
         </header>
