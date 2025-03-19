@@ -4,6 +4,7 @@ import Navbar from './components/Navbar'
 import HomePages from './pages/HomePages'
 import Footer from './components/Footer'
 import Login from './pages/Login'
+import ScrollToTop from './components/ScrollToTop'
 
 const ScrollHandler = () => {
   const location = useLocation();
@@ -23,6 +24,7 @@ const ScrollHandler = () => {
 function App() {
   return (
     <BrowserRouter>
+      <ScrollToTop />
       <Navbar />
       <ScrollHandler />
       <Routes>
