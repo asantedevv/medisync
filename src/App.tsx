@@ -3,6 +3,7 @@ import { useEffect } from "react"
 import Navbar from './components/Navbar'
 import HomePages from './pages/HomePages'
 import Footer from './components/Footer'
+import Login from './pages/Login'
 
 const ScrollHandler = () => {
   const location = useLocation();
@@ -26,6 +27,7 @@ function App() {
       <ScrollHandler />
       <Routes>
         <Route path="/" element={<HomePages />} />
+        <Route path="/login" element={<Login />} />
       </Routes>
       <Footer />
     </BrowserRouter>
